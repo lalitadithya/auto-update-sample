@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateSample", "AutoUpdateSample\AutoUpdateSample.csproj", "{CE940DBF-2774-4188-AA5E-8C21A344755E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE940DBF-2774-4188-AA5E-8C21A344755E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE940DBF-2774-4188-AA5E-8C21A344755E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE940DBF-2774-4188-AA5E-8C21A344755E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE940DBF-2774-4188-AA5E-8C21A344755E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F22B413C-FCC8-4F70-AF16-7D03605BC411}
+	EndGlobalSection
+EndGlobal
