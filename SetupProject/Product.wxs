@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:fg="http://www.firegiant.com/schemas/v3/wxs/fgwep.xsd">
+	<Product Id="*" Name="AutoUpdateSample" Language="1033" Version="1.0.0" Manufacturer="Lalit Adithya" UpgradeCode="3affc0c3-41a2-4f92-9a40-562bf0680aac">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="AutoUpdateSample" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFiles64Folder">
+				<Directory Id="INSTALLFOLDER" Name="AutoUpdateSample" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="AutoUpdateSampleComponent" Guid="d34c0e93-8b90-4016-9640-932b246bff9b" Win64="yes">
+        <Environment Id='UpdatePath' Name='PATH' Action='set' System='yes' Part='last' Value='[INSTALLFOLDER]' />
+        <File Id="AutoUpdateSample.exe" Name="AutoUpdateSample.exe" Source="C:\AutoUpdateSample\AutoUpdateSample.exe" />
+        <File Id="AutoUpdateSample.pdb" Name="AutoUpdateSample.pdb" Source="C:\AutoUpdateSample\AutoUpdateSample.pdb" />
+        <File Id="clrcompression.dll" Name="clrcompression.dll" Source="C:\AutoUpdateSample\clrcompression.dll" />
+        <File Id="clrjit.dll" Name="clrjit.dll" Source="C:\AutoUpdateSample\clrjit.dll" />
+        <File Id="coreclr.dll" Name="coreclr.dll" Source="C:\AutoUpdateSample\coreclr.dll" />
+        <File Id="mscordaccore.dll" Name="mscordaccore.dll" Source="C:\AutoUpdateSample\mscordaccore.dll" />
+      </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
