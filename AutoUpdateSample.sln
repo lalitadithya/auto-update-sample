@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateSample", "AutoUpdateSample\AutoUpdateSample.csproj", "{CE940DBF-2774-4188-AA5E-8C21A344755E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoUpdateSample", "AutoUpdateSample\AutoUpdateSample.csproj", "{CE940DBF-2774-4188-AA5E-8C21A344755E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseMetadata", "ReleaseMetadata", "{3AD9E756-FAC5-4D2A-A608-D43B0B8FB79A}"
+	ProjectSection(SolutionItems) = preProject
+		1.0.0.json = 1.0.0.json
+		1.1.0.json = 1.1.0.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
