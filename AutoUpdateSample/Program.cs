@@ -1,6 +1,10 @@
-﻿using System;
+﻿using CincinnatiClientSdk;
+using CincinnatiClientSdk.Builders;
+using System;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
+using System.Net.Http;
 using System.Reflection;
 
 namespace AutoUpdateSample
@@ -8,8 +12,8 @@ namespace AutoUpdateSample
     class Program
     {
         static bool isUpdateAvailable = false;
-        static string installerWebLocation = "";
-        static string newVersion = "";
+        static string updateServer = "la-updateserver.eastus.azurecontainer.io";
+        static string installerLocation = "";
 
         static void Main(string[] args)
         {
@@ -19,16 +23,27 @@ namespace AutoUpdateSample
             Console.WriteLine("Hello World! You are currently running " + currentVersion);
 
             // check for updates
-            isUpdateAvailable = true;
-            installerWebLocation = "https://github.com";
-            newVersion = "1.1.0";
+            CincinnatiClient cincinnatiClient = CincinnatiClientBuilder.GetBuilder()
+                                                    .WithServerUrl(updateServer)
+                                                    .WithReleaseChannel("stable")
+                                                    .Build(new HttpClient());
+            var availableUpgrades = cincinnatiClient.GetNextApplicationVersions(currentVersion).GetAwaiter().GetResult();
+            if(availableUpgrades.Count == 1)
+            {
+                isUpdateAvailable = true;
+                string newVersion = availableUpgrades[0].Version;
+                string installerWebLocation = availableUpgrades[0].Metadata["installer"];
+                Console.WriteLine("Downloading update for version " + newVersion);
+                installerLocation = Path.Join(Path.GetTempPath(), $"AutoUpdateSample.{newVersion}.msi");
+                using var client = new WebClient();
+                client.DownloadFile(installerWebLocation, installerLocation);
+            }
         }
 
         private static void CurrentDomain_ProcessExit(object sender, EventArgs e)
         {
             if(isUpdateAvailable)
             {
-                string installerLocation = Path.Join(Path.GetTempPath(), $"AutoUpdateSample.{newVersion}.msi");
                 Process.Start(new ProcessStartInfo(installerLocation)
                 {
                     UseShellExecute = true
