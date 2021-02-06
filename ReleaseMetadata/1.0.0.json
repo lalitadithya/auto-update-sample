@@ -4,6 +4,6 @@
   "previous": [],
   "metadata": {
     "graph.release.channels": "stable",
-    "installer": "https://github.com/lalitadithya/auto-update-sample/releases/download/1.0.0/SetupProject.msi"
+    "installer": "https://github.com/lalitadithya/auto-update-sample/releases/download/1.0.0/AutoUpdateSample.1.0.0.msi"
   }
 }

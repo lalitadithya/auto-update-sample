@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:fg="http://www.firegiant.com/schemas/v3/wxs/fgwep.xsd">
-	<Product Id="*" Name="AutoUpdateSample" Language="1033" Version="1.0.0" Manufacturer="Lalit Adithya" UpgradeCode="3affc0c3-41a2-4f92-9a40-562bf0680aac">
+	<Product Id="*" Name="AutoUpdateSample" Language="1033" Version="1.1.0" Manufacturer="Lalit Adithya" UpgradeCode="3affc0c3-41a2-4f92-9a40-562bf0680aac">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />

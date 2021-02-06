@@ -20,7 +20,7 @@ namespace AutoUpdateSample
             AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             string currentVersion = $"{version.Major}.{version.Minor}.{version.Revision}";
-            Console.WriteLine("Hello World! You are currently running " + currentVersion);
+            Console.WriteLine("Hello World! :) You are currently running " + currentVersion);
 
             // check for updates
             CincinnatiClient cincinnatiClient = CincinnatiClientBuilder.GetBuilder()
