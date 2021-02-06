@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseMetadata", "ReleaseMetadata", "{3AD9E756-FAC5-4D2A-A608-D43B0B8FB79A}"
 	ProjectSection(SolutionItems) = preProject
 		ReleaseMetadata\1.0.0.json = ReleaseMetadata\1.0.0.json
-		ReleaseMetadata\1.1.0.json = ReleaseMetadata\1.1.0.json
 		ReleaseMetadata\ReleaseMetadata.Dockerfile = ReleaseMetadata\ReleaseMetadata.Dockerfile
 	EndProjectSection
 EndProject
