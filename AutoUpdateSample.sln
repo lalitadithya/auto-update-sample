@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoUpdateSample", "AutoUpd
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseMetadata", "ReleaseMetadata", "{3AD9E756-FAC5-4D2A-A608-D43B0B8FB79A}"
 	ProjectSection(SolutionItems) = preProject
-		1.0.0.json = 1.0.0.json
-		1.1.0.json = 1.1.0.json
-		ReleaseMetadata.Dockerfile = ReleaseMetadata.Dockerfile
+		ReleaseMetadata\1.0.0.json = ReleaseMetadata\1.0.0.json
+		ReleaseMetadata\1.1.0.json = ReleaseMetadata\1.1.0.json
+		ReleaseMetadata\ReleaseMetadata.Dockerfile = ReleaseMetadata\ReleaseMetadata.Dockerfile
 	EndProjectSection
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupProject", "SetupProject\SetupProject.wixproj", "{CEAD905E-9799-4CD1-8F9D-985D8E06614C}"
